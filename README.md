@@ -2,7 +2,7 @@
 
 
 ## Config:
-### In-addition to the above code, create a .env file with below key words. 
+### Please ensure to create a '.env' file in-addition to the above code. This is to declare the environment calling in the setting.py file in the code.  
 SECRET_KEY = '' <br>
 DEBUG = <br>
 DJANGO_ALLOWED_HOSTS = ""<br>
