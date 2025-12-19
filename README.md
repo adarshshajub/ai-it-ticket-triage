@@ -6,13 +6,15 @@
 ## Overview
 ### Manual triaging of IT support tickets is time-consuming, inconsistent, and error-prone. This project automates the analysis, categorization, prioritization, and routing of IT issues using AI techniques, reducing manual effort and improving response times.
 
-### The system supports:
--> Web-based issue submission
--> Email-based ticket creation
--> AI-driven category & priority prediction
--> Admin and user dashboards
--> ServiceNow integration
--> Secure authentication with email verification
+<h3>The system supports: <h3>
+<ul>
+	<li> Web-based issue submission</li>
+	<li> Email-based ticket creation</li>
+	<li> AI-driven category & priority prediction</li>
+	<li> Admin and user dashboards</li>
+	<li> ServiceNow integration</li>
+	<li> Secure authentication with email verification</li>
+</ul>
 
 ### Key Features
 #### User Features
