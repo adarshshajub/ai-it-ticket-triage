@@ -1,7 +1,27 @@
-# 🧠 AI-Powered IT Ticket Automation System
+# AI-Powered IT Ticket Automation System
 
-## An intelligent IT support automation platform that uses Machine Learning, NLP, and GenAI-assisted semantic embeddings to analyze user-reported issues (via web or email), automatically classify ticket categories and priorities, and integrate with ServiceNow for incident creation and routing.
+### An intelligent IT support automation platform that uses Machine Learning, NLP, and GenAI-assisted semantic embeddings to analyze user-reported issues (via web or email), automatically classify ticket categories and priorities, and integrate with ServiceNow for incident creation and routing.
 
+
+## Overview
+### Manual triaging of IT support tickets is time-consuming, inconsistent, and error-prone. This project automates the analysis, categorization, prioritization, and routing of IT issues using AI techniques, reducing manual effort and improving response times.
+
+### The system supports:
+  ##### Web-based issue submission
+  ##### Email-based ticket creation
+  ##### AI-driven category & priority prediction
+  ##### Admin and user dashboards
+  ##### ServiceNow integration
+  ##### Secure authentication with email verification
+
+### Key Features
+#### User Features
+  ##### User registration with email verification
+  ##### Secure login with validation messages
+  ##### Submit IT issues via web portal
+  ##### View ticket status and ServiceNow details
+  ##### Profile management (update details, change password)
+  ##### Password reset via email
 
 ## Config:
 ### Ensure to create a '.env' file in-addition to the above code. This is to declare the environment calling in the setting.py file in the code.  
