@@ -1,56 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <style>
-        body {
-            font-family: Arial, Helvetica, sans-serif;
-            line-height: 1.6;
-            margin: 40px;
-            background-color: #f9fafb;
-            color: #1f2937;
-        }
-        h1, h2, h3 {
-            color: #111827;
-        }
-        h1 {
-            border-bottom: 3px solid #2563eb;
-            padding-bottom: 10px;
-        }
-        h2 {
-            border-bottom: 2px solid #e5e7eb;
-            padding-bottom: 6px;
-            margin-top: 32px;
-        }
-        code, pre {
-            background: #111827;
-            color: #f9fafb;
-            padding: 12px;
-            border-radius: 6px;
-            display: block;
-            overflow-x: auto;
-        }
-        ul {
-            margin-left: 20px;
-        }
-        .section {
-            margin-bottom: 30px;
-        }
-        .highlight {
-            background: #eef2ff;
-            padding: 12px;
-            border-left: 5px solid #2563eb;
-            margin: 16px 0;
-        }
-        footer {
-            margin-top: 50px;
-            text-align: center;
-            font-size: 14px;
-            color: #6b7280;
-        }
-    </style>
-</head>
-
 <body>
 
 <h1>AI Powered IT Ticket Automation System</h1>
@@ -61,12 +10,6 @@ This project implements an intelligent IT support ticket automation platform usi
 and <strong>ServiceNow integration</strong>. The system automates ticket classification,
 priority prediction, routing, and lifecycle management.
 </p>
-
-<div class="highlight">
-<strong>Academic Context:</strong><br>
-BITS Pilani – ZC499T Capstone Project<br>
-Semester 8 – Software Engineering
-</div>
 
 <hr>
 
