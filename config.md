@@ -75,7 +75,7 @@ Create Superuser (For Admin login):
 ```bash
 python manage.py createsuperuser
 ```
-- if you want to overide email verification of superuser, run below commands in django shell. 
+If you want to override email verification of superuser, run below commands in django shell. 
 ```bash
 python manage.py shell
     from django.contrib.auth import get_user_model
@@ -116,8 +116,8 @@ python manage.py mail_monitor
 
 ## 12. Add Service-now Group IDs 
 - Login to admin dashboard and open Assignment Group edit
-    http://127.0.0.1:8000/service-now/admin/assignment-groups/
-- Add the Group Name and IDs from your service-now 
+    (http://127.0.0.1:8000/service-now/admin/assignment-groups/)
+- Add the Group Name and IDs from your service-now
 
 
 
