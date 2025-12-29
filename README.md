@@ -197,7 +197,7 @@ It is suitable for academic evaluation as well as real-world enterprise extensio
 </div>
 
 <div>
-    Follow <a href="https://github.com/adarshshajub/AI-Powered-IT-Ticket-Classification-and-Routing-System/config.md">config.md</a> file for the Configuration & Setup Guide
+    <a href="https://github.com/adarshshajub/AI-Powered-IT-Ticket-Classification-and-Routing-System/blob/main/config.md">Click here for the Configuration & Setup Guide</a> 
 </div>
 
 </body>
