@@ -2,7 +2,6 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <title>AI Powered IT Ticket Automation System – README</title>
     <style>
         body {
             font-family: Arial, Helvetica, sans-serif;
