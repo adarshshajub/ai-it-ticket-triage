@@ -195,10 +195,11 @@ SERVICENOW_PASSWORD = os.getenv('SERVICENOW_PASSWORD')
 SERVICENOW_SYSID = os.getenv('SERVICENOW_SYSID')
 
 
-CELERY_BROKER_URL = 'redis://localhost:6379/0'
-CELERY_ACCEPT_CONTENT = ['json']
-CELERY_TASK_SERIALIZER = 'json'
-CELERY_RESULT_BACKEND = 'django-db'
+CELERY_BROKER_URL = os.getenv('CELERY_BROKER_URL')
+celery_content_type = os.getenv('CELERY_ACCEPT_CONTENT')
+CELERY_ACCEPT_CONTENT = [celery_content_type]
+CELERY_TASK_SERIALIZER = os.getenv('CELERY_TASK_SERIALIZER')
+CELERY_RESULT_BACKEND = os.getenv('CELERY_RESULT_BACKEND')
 CELERY_TIMEZONE = TIME_ZONE
 
 
@@ -211,8 +212,12 @@ CELERY_BEAT_SCHEDULE = {
         "task": "servicenow.utils.task.servicenow_ticket_retry",
         "schedule": crontab(minute="*/10"),  # every 10 minutes
     },
-    "check-email-replay-status-every-10-min": {
+    "check-email-replay-status-every-05-min": {
         "task": "tickets.utils.task.send_email_replay_with_ticket",
-        "schedule": crontab(minute="*/5"),  # every 10 minutes
+        "schedule": crontab(minute="*/5"),  # every 5 minutes
+    },
+    "monitor-email-every-01-min": {
+        "task": "tickets.utils.emailmonitortask.email_monitoring",
+        "schedule": crontab(minute="*/1"),  # every 1 minutes
     },
 }

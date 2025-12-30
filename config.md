@@ -55,12 +55,16 @@ SUPPORT_EMAIL_HOST_USER = 'your-email'
 SUPPORT_EMAIL_HOST_PASSWORD = 'email-app-password'
 EMAIL_IMAP_HOST = 'imap.gmail.com'
 EMAIL_IMAP_PORT = 993
-DEFAULT_SITE_SCHEME='http'
-DEFAULT_SITE_DOMAIN='localhost:8000'
+DEFAULT_SITE_SCHEME ='http'
+DEFAULT_SITE_DOMAIN ='localhost:8000'
 SERVICENOW_INSTANCE = 'your-servicenow-instance'
 SERVICENOW_USERNAME = 'your-servicenow-instance-username'
 SERVICENOW_PASSWORD = 'your-servicenow-instance-password'
-SERVICENOW_SYSID= 'your-servicenow-instance-sysid'
+SERVICENOW_SYSID = 'your-servicenow-instance-sysid'
+CELERY_BROKER_URL = 'redis://localhost:6379/0'
+CELERY_ACCEPT_CONTENT = 'json'
+CELERY_TASK_SERIALIZER = 'json'
+CELERY_RESULT_BACKEND = 'django-db'
 ```
 
 ## 6. Django Setup
@@ -109,12 +113,7 @@ celery -A AI_Powered_IT_Ticket_System worker -l info --pool=solo
 celery -A AI_Powered_IT_Ticket_System beat -l info
 ```
 
-## 11. Start Email Monitoring 
-```bash
-python manage.py mail_monitor
-```
-
-## 12. Add Service-now Group IDs 
+## 11. Add Service-now Group IDs 
 - Login to admin dashboard and open Assignment Group edit
     (http://127.0.0.1:8000/service-now/admin/assignment-groups/)
 - Add the Group Name and IDs from your service-now
