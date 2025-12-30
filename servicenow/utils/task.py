@@ -11,13 +11,7 @@ from django.db.models import Q
 logger = logging.getLogger(__name__)
 
 
-@shared_task(
-    bind=True,
-    autoretry_for=(Exception,),
-    retry_kwargs={"max_retries": 3, "countdown": 60},
-    retry_backoff=True,
-    retry_jitter=True,
-)
+@shared_task(bind=True,)
 def process_ticket_task(self, ticket_id):
     """
     Celery task to sync ticket with ServiceNow.
@@ -47,12 +41,7 @@ def process_ticket_task(self, ticket_id):
         raise
 
 
-@shared_task(
-    bind=True,
-    autoretry_for=(Exception,),
-    retry_backoff=30,
-    retry_kwargs={"max_retries": 3},
-)
+@shared_task(bind=True,)
 def sync_servicenow_ticket_statuses(self):
     """
     Periodically sync ServiceNow ticket status into local DB
@@ -93,8 +82,8 @@ def sync_servicenow_ticket_statuses(self):
 
 @shared_task
 def servicenow_ticket_retry():
-    tickets = Ticket.objects.exclude(
-        ticket_creation_status__in=["created","retrying"]
+    tickets = Ticket.objects.filter(
+        ticket_creation_status__in=["pending","failed"]
     )
     if tickets:
         logger.info("Servicenow sheduled retry started...")

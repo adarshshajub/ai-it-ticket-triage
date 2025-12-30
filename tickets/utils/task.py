@@ -1,8 +1,9 @@
 import logging
 from celery import shared_task
 from tickets.utils.mailer import send_email_reply
-from tickets.models import Ticket, EmailTicket
+from tickets.models import Ticket
 from django.db.models import Q
+
 
 logger = logging.getLogger(__name__)
 
@@ -21,4 +22,5 @@ def send_email_replay_with_ticket():
                     logger.debug(f"Email reply sent to {email.sender} for Ticket #{ticket.id}")
     else:
         logger.debug("All email replay are sent")
+
 
