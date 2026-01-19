@@ -197,7 +197,7 @@ class PasswordChangeView(LoginRequiredMixin, auth_views.PasswordChangeView):
 # Password reset request view
 class PasswordResetView(auth_views.PasswordResetView):
     logger.info("Password reset view accessed.")
-    # template_name = "email/password_reset_request.html"
+    template_name = "registration/password_reset_request.html"
     email_template_name = "email/password_reset_email_content.txt"
     html_email_template_name = "email/password_reset_email_content.html"
     subject_template_name = "email/password_reset_subject_content.txt"
